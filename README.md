@@ -22,3 +22,8 @@ Push the Browse: You have to select a file, which you want to analyze.
 Check the check box: You must check the check box of File type (isImage/isVideo).
 
 Push the Process: Get the final result.
+
+In video case, the speed is 0.5s per-frame.
+Please tune the speed (Line 27 in Process_Recognition.m) to you want, if you feel the display speed is too slow.
+
+
