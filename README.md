@@ -18,5 +18,7 @@ Main Entry: "UI_NumberRecognition.m"
 
 # Note: 
 Push the Browse: You have to select a file, which you want to analyze.
+
 Check the check box: You must check the check box of File type (isImage/isVideo).
+
 Push the Process: Get the final result.
