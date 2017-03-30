@@ -6,6 +6,6 @@ imshow(imdata);
 axes(handles.axes2);
 for i=0:9
     if OutputLabel(1)==i         
-        text(0.5, 0.5, num2str(i))
+        text(0.4, 0.4, num2str(i),'fontsize',50)
     end
 end
