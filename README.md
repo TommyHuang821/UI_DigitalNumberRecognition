@@ -5,7 +5,7 @@ All images or videos were done by two pre-processing, wihch are image resize to 
 The structure of CNN is input→6c(Sigmoid)→2s→12c(Sigmoid)→2s→connection(Sigmoid)→output
 
 Main Entry: "UI_NumberRecognition.m"
-![alt tag](https://github.com/TommyHuang821/UI_DigitalNumberRecognition/UI_Design.png)
+![alt tag](https://github.com/TommyHuang821/UI_DigitalNumberRecognition/blob/master/UI_Design.png)
 
 # Note: 
 Push the Browse: You have to select a file, which you want to analyze.
