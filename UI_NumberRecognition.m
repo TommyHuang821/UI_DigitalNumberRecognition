@@ -73,6 +73,6 @@ function checkbox_video_Callback(hObject, eventdata, handles)
 
 % --- Executes on button press in pushbutton_stop.
 function pushbutton_stop_Callback(hObject, eventdata, handles)
-global NumberData;
-NumberData.flag_Stop=1;
+global true;
+true=1;
 

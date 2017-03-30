@@ -8,7 +8,13 @@ if (flag_import==1)
     if flag_video==1 && flag_image==0
         videodata=NumberData.videodata;
         numFrames = videodata.NumberOfFrames;
-        for i = 1:numFrames
+        i=0;
+        while (1)
+            i=i+1;
+            if i>numFrames
+                break
+            end
+     
             imdata =  read(videodata,i);
             garyimage=Process_Preprocessing(imdata);
             [garyimage]=imBinarization(garyimage);
@@ -19,9 +25,12 @@ if (flag_import==1)
             Result=OutputLabel-1;
             Pop_showResult(handles,imdata,Result);
             pause(0.5)
-            if NumberData.flag_Stop==1
+            drawnow()
+            global true;
+            if true==1
                 break
             end
+              
             cla(handles.axes1,'reset')
             cla(handles.axes2,'reset')
         end  

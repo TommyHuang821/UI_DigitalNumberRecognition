@@ -1,5 +1,6 @@
 function NumberData=Pop_initialization(NumberData)
-
+global true;
+true=0;
 NumberData.filetype=[];
 NumberData.str=[];
 NumberData.flag_Stop=0;
