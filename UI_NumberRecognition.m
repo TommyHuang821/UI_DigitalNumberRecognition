@@ -4,7 +4,7 @@ function varargout = UI_NumberRecognition(varargin)
 
 % Edit the above text to modify the response to help UI_NumberRecognition
 
-% Last Modified by GUIDE v2.5 30-Mar-2017 09:46:38
+% Last Modified by GUIDE v2.5 30-Mar-2017 14:00:55
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -28,12 +28,6 @@ end
 
 % --- Executes just before UI_NumberRecognition is made visible.
 function UI_NumberRecognition_OpeningFcn(hObject, eventdata, handles, varargin)
-% This function has no output args, see OutputFcn.
-% hObject    handle to figure
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to UI_NumberRecognition (see VARARGIN)
-
 % Choose default command line output for UI_NumberRecognition
 handles.output = hObject;
 
@@ -75,3 +69,10 @@ Process_Recognition(handles,NumberData);
 % --- Executes on button press in checkbox_Image.
 function checkbox_Image_Callback(hObject, eventdata, handles)
 function checkbox_video_Callback(hObject, eventdata, handles)
+
+
+% --- Executes on button press in pushbutton_stop.
+function pushbutton_stop_Callback(hObject, eventdata, handles)
+global NumberData;
+NumberData.flag_Stop=1;
+

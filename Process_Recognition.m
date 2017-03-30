@@ -19,6 +19,9 @@ if (flag_import==1)
             Result=OutputLabel-1;
             Pop_showResult(handles,imdata,Result);
             pause(0.5)
+            if NumberData.flag_Stop==1
+                break
+            end
             cla(handles.axes1,'reset')
             cla(handles.axes2,'reset')
         end  
@@ -36,5 +39,5 @@ if (flag_import==1)
         Pop_showResult(handles,imdata,Result);
     end
 elseif (flag_import==0)
-    msgbox('æ²’æœ‰åŒ¯å…¥ä»»ä½•å½±åƒæˆ–æ˜¯å½±ç‰‡','File Open Error','error');
+    msgbox('¨S¦³¶×¤J¥ô¦ó¼v¹³©Î¬O¼v¤ù','File Open Error','error');
 end
