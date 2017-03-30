@@ -1,7 +1,5 @@
 function Process_Recognition(handles,NumberData)
 
-
-
 flag_import=NumberData.flag_import; 
 CNN_net=NumberData.CNN_net;
 flag_video=NumberData.flag_video;
@@ -13,11 +11,10 @@ if (flag_import==1)
         for i = 1:numFrames
             imdata =  read(videodata,i);
             garyimage=Process_Preprocessing(imdata);
-            garyimage = double(garyimage)/255;
             [garyimage]=imBinarization(garyimage);
             
-            test_data(:,:,1)=garyimage';
-            test_data(:,:,2)=garyimage';
+            test_data(:,:,1)=garyimage;
+            test_data(:,:,2)=garyimage;
             [OutputLabel ] = CNN_test(CNN_net, test_data);
             Result=OutputLabel-1;
             Pop_showResult(handles,imdata,Result);
@@ -28,11 +25,10 @@ if (flag_import==1)
     elseif flag_video==0 && flag_image==1   
         imdata=NumberData.imdata;
         garyimage=Process_Preprocessing(imdata);
-        garyimage = double(garyimage)/255;
         [garyimage]=imBinarization(garyimage);
         
-        test_data(:,:,1)=garyimage';
-        test_data(:,:,2)=garyimage';
+        test_data(:,:,1)=garyimage;
+        test_data(:,:,2)=garyimage;
 
         
         [OutputLabel Pred ] = CNN_test(CNN_net, test_data);
@@ -40,5 +36,5 @@ if (flag_import==1)
         Pop_showResult(handles,imdata,Result);
     end
 elseif (flag_import==0)
-    msgbox('¨S¦³¶×¤J¥ô¦ó¼v¹³©Î¬O¼v¤ù','File Open Error','error');
+    msgbox('æ²’æœ‰åŒ¯å…¥ä»»ä½•å½±åƒæˆ–æ˜¯å½±ç‰‡','File Open Error','error');
 end
