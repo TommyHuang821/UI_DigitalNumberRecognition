@@ -63,6 +63,7 @@ NumberData=Pop_SelectionFile(NumberData,handles);
 % --- Executes on button press in pushbutton_process.
 function pushbutton_process_Callback(hObject, eventdata, handles)
 global NumberData;
+set(handles.axes2,'Visible','off');
 NumberData=Pop_IndentifyAndLoadFile(handles,NumberData);
 Process_Recognition(handles,NumberData);
 
